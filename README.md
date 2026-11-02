@@ -17,3 +17,22 @@ The application automatically seeds the database on startup with a default pantr
 
 Database Configuration
 An embedded H2 database is configured via application properties with an enabled H2 console for easy data inspection, along with automatic schema generation.
+
+
+# rishita-(algorithm-service-layer)
+Project Title: Macro Optimization & Expiry Prioritization Engine
+
+Overview
+This module implements the core business logic engine for Team Member 2, focusing on optimizing ingredient selection, hitting macro targets, and prioritizing expiring food items.
+
+Core Optimization Logic
+The MacroOptimizerService processes pantry ingredients to build balanced meal portions based on daily calorie and protein goals.
+Uses a greedy optimization strategy to calculate protein density per calorie while strictly respecting maximum available pantry portion sizes.
+
+Expiry Heuristic Engine
+Includes dynamic expiry scoring that assigns high urgency multiplier scores to ingredients expiring soonest (10x priority for items expiring within 1 day, 5x for within 3 days).
+Ensures pantry ingredients nearing expiration are prioritized first to reduce household food waste.
+
+Data Structures & Results
+Internal data structures handle seamless calculation processing between pantry inputs and final recommendations.
+Returns an OptimizationResult object containing recommended ingredient portion weights (in grams), total achieved calories, total achieved protein, and target completion status.
