@@ -36,3 +36,15 @@ Ensures pantry ingredients nearing expiration are prioritized first to reduce ho
 Data Structures & Results
 Internal data structures handle seamless calculation processing between pantry inputs and final recommendations.
 Returns an OptimizationResult object containing recommended ingredient portion weights (in grams), total achieved calories, total achieved protein, and target completion status.
+
+
+# Team Member 3: Controllers, Services & PDF Export (Backend & Utilities)
+
+## Overview
+This module connects the web interface form inputs to the backend meal optimization algorithm, handles user session states, generates downloadable PDF recipe cards using Apache PDFBox, and verifies correctness through unit testing.
+
+## Core Components
+* **`DashboardController`**: Renders the main dashboard (`/`, `/dashboard`) and initializes default pantry ingredient items (Chicken, Paneer, Eggs, Oats, Rice, and Peanut Butter).
+* **`OptimizerController`**: Handles form submissions (`/optimize`), passes calorie and protein targets into `MacroOptimizerService`, manages optimization results, and exposes the PDF download endpoint (`/download-recipe-card`).
+* **`PdfExportService`**: Integrates **Apache PDFBox** to format and generate a clean, structured PDF report containing target vs. achieved macronutrient summaries and prioritized ingredient portions.
+* **`MacroOptimizerServiceTest`**: A JUnit test suite verifying that the greedy optimization algorithm strictly respects daily calorie caps while hitting target protein thresholds.
