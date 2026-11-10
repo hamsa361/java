@@ -1,4 +1,4 @@
-#hema-(data layer)
+# Hema: (data layer)
 Project Title: Database and Domain Models Data Layer
 
 Overview
@@ -19,7 +19,7 @@ Database Configuration
 An embedded H2 database is configured via application properties with an enabled H2 console for easy data inspection, along with automatic schema generation.
 
 
-# rishita-(algorithm-service-layer)
+# Rishita: (algorithm-service-layer)
 Project Title: Macro Optimization & Expiry Prioritization Engine
 
 Overview
@@ -38,7 +38,7 @@ Internal data structures handle seamless calculation processing between pantry i
 Returns an OptimizationResult object containing recommended ingredient portion weights (in grams), total achieved calories, total achieved protein, and target completion status.
 
 
-# Team Member 3: Controllers, Services & PDF Export (Backend & Utilities)
+# Lucky: Controllers, Services & PDF Export (Backend & Utilities)
 
 ## Overview
 This module connects the web interface form inputs to the backend meal optimization algorithm, handles user session states, generates downloadable PDF recipe cards using Apache PDFBox, and verifies correctness through unit testing.
